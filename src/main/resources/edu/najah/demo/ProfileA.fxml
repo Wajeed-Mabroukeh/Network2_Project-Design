@@ -25,7 +25,7 @@
                               <Image url="@images-removebg-preview.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="141.0" layoutY="6.0" prefHeight="66.0" prefWidth="88.0" text="Wajeed" textFill="WHITE">
+                        <Label fx:id="Label_Name_Admin" layoutX="141.0" layoutY="6.0" prefHeight="66.0" prefWidth="88.0" text="Wajeed" textFill="WHITE">
                            <font>
                               <Font name="Chiller" size="34.0" />
                            </font>
@@ -37,7 +37,7 @@
             <VBox prefHeight="544.0" prefWidth="74.0" style="-fx-background-color: #131022; -fx-background-radius: 15 0 0 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <Pane prefHeight="79.0" prefWidth="74.0" style="-fx-background-radius: 15 0 15 15;" />
-                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="142.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@css/fullpackstyling.css" text="Admins" textFill="#a868a0">
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onMousePressed="#InsertEmployee_Profile" prefHeight="62.0" prefWidth="74.0" styleClass="button3" stylesheets="@css/fullpackstyling.css" text="Add " textFill="#a868a0">
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -46,7 +46,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button contentDisplay="TOP" mnemonicParsing="false" onMousePressed="#InsertEmployee" prefHeight="62.0" prefWidth="74.0" styleClass="button3" stylesheets="@css/fullpackstyling.css" text="Add " textFill="#a868a0">
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onMousePressed="#Search" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@css/fullpackstyling.css" text="Searsh " textFill="#a868a0">
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -55,25 +55,6 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="74.0" text="Employee" textFill="WHITE">
-                     <font>
-                        <Font size="11.0" />
-                     </font>
-                  </Label>
-                  <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@css/fullpackstyling.css" text="Searsh" textFill="#a868a0">
-                     <graphic>
-                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@resources/group.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="74.0" text="Employee" textFill="WHITE">
-                     <font>
-                        <Font size="11.0" />
-                     </font>
-                  </Label>
                   <Button contentDisplay="TOP" mnemonicParsing="false" onMousePressed="#Logout" prefHeight="66.0" prefWidth="74.0" styleClass="button3" text="Log Out" textFill="#a868a0">
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
@@ -145,7 +126,7 @@
                         <TextField fx:id="GenderAdmin" disable="true" layoutX="7.0" layoutY="10.0" prefHeight="26.0" prefWidth="206.0" promptText="Gender" />
                      </children>
                   </Pane>
-                  <Button fx:id="EditAdmin" layoutX="371.0" layoutY="430.0" mnemonicParsing="false" onMousePressed="#EditProfile" prefHeight="30.0" prefWidth="145.0" styleClass="button4" text="Edit Info" textFill="WHITE">
+                  <Button fx:id="EditAdmin" layoutX="371.0" layoutY="430.0" mnemonicParsing="false" onMousePressed="#EditProfile_Admin" prefHeight="30.0" prefWidth="145.0" styleClass="button4" text="Edit Info" textFill="WHITE">
                      <stylesheets>
                         <URL value="@css/fullpackstyling.css" />
                      </stylesheets></Button>
@@ -173,7 +154,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Label layoutX="8.0" layoutY="411.0" prefHeight="51.0" prefWidth="363.0" text="You can change your personal information by pressing the button" textFill="#41951c">
+                  <Label fx:id="LabelSave_A" layoutX="8.0" layoutY="411.0" prefHeight="51.0" prefWidth="363.0" text="You can change your personal information by pressing the button" textFill="#41951c">
                      <font>
                         <Font name="Chiller" size="19.0" />
                      </font>

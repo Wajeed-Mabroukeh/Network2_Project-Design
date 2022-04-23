@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXRadioButton?>
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -9,6 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
@@ -42,6 +44,15 @@
             <VBox prefHeight="544.0" prefWidth="74.0" style="-fx-background-color: #131022; -fx-background-radius: 15 0 0 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <Pane prefHeight="79.0" prefWidth="74.0" style="-fx-background-radius: 15 0 15 15;" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onMousePressed="#Previous_toProfile" prefHeight="66.0" prefWidth="79.0" styleClass="button3" stylesheets="@css/fullpackstyling.css" text="My Profile" textFill="#a868a0">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/group.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
                   <Button contentDisplay="TOP" mnemonicParsing="false" onMousePressed="#Logout" prefHeight="66.0" prefWidth="74.0" styleClass="button3" text="Log Out" textFill="#a868a0">
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
@@ -109,28 +120,52 @@
                         <TextField fx:id="GenderInsert" layoutX="7.0" layoutY="10.0" prefHeight="26.0" prefWidth="206.0" promptText="Gender" />
                      </children>
                   </Pane>
-                  <Pane layoutX="82.0" layoutY="303.0" prefHeight="54.0" prefWidth="370.0" style="-fx-background-color: #1A172A; -fx-background-radius: 10;">
+                  <Pane layoutX="86.0" layoutY="340.0" prefHeight="54.0" prefWidth="403.0" style="-fx-background-color: #1A172A; -fx-background-radius: 10;" AnchorPane.bottomAnchor="137.0">
                      <children>
                         <Label layoutY="-5.0" prefHeight="51.0" prefWidth="74.0" text="About:" textFill="#41951c">
                            <font>
                               <Font name="Chiller" size="36.0" />
                            </font>
                         </Label>
-                        <Label layoutX="74.0" layoutY="8.0" prefHeight="38.0" prefWidth="398.0" text="The page displays personal information about you " textFill="WHITE">
+                        <Label layoutX="74.0" layoutY="8.0" prefHeight="38.0" prefWidth="405.0" text=" Through this page, you can add Admins and employees" textFill="WHITE">
                            <font>
                               <Font size="13.0" />
                            </font>
                         </Label>
                      </children>
                   </Pane>
-                  <Button fx:id="SaveInsert" layoutX="380.0" layoutY="373.0" mnemonicParsing="false" onMousePressed="#Save_Employee" prefHeight="34.0" prefWidth="145.0" styleClass="button4" text="Save Info" textFill="WHITE">
+                  <Button fx:id="SaveInsert" layoutX="382.0" layoutY="373.0" mnemonicParsing="false" onMousePressed="#Save_Employee" prefHeight="34.0" prefWidth="145.0" styleClass="button4" text="Save Info" textFill="WHITE" AnchorPane.bottomAnchor="90.0">
                      <stylesheets>
                         <URL value="@css/fullpackstyling.css" />
                      </stylesheets>
                   </Button>
-                  <Label layoutX="10.0" layoutY="364.0" prefHeight="51.0" prefWidth="363.0" text="You can change your personal information by pressing the button" textFill="#41951c">
+                  <Label layoutX="10.0" layoutY="364.0" prefHeight="51.0" prefWidth="372.0" text="You can Save your personal information by pressing the button" textFill="#41951c" AnchorPane.bottomAnchor="86.0">
                      <font>
-                        <Font name="Chiller" size="19.0" />
+                        <Font name="Chiller" size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXRadioButton fx:id="RadioInsertAdmin" layoutX="174.0" layoutY="292.0" text="Admin" textFill="WHITE" AnchorPane.bottomAnchor="201.0">
+                     <selectedColor>
+                        <Color red="0.8026315569877625" green="0.21174362301826477" blue="0.048306528478860855" />
+                     </selectedColor>
+                     <unSelectedColor>
+                        <Color red="0.8552631735801697" green="0.047514621168375015" blue="0.047514621168375015" />
+                     </unSelectedColor>
+                     <font>
+                        <Font name="Chiller" size="27.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="RadioInsertEmployee" layoutX="287.0" layoutY="292.0" text="Employee" textFill="WHITE" AnchorPane.bottomAnchor="201.0">
+                     <unSelectedColor>
+                        <Color red="0.21174463629722595" green="0.5789473652839661" blue="0.2484649121761322" />
+                     </unSelectedColor>
+                     <font>
+                        <Font name="Chiller" size="27.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <Label layoutX="110.0" layoutY="279.0" prefHeight="51.0" prefWidth="74.0" text="Type:" textFill="#41951c">
+                     <font>
+                        <Font name="Chiller" size="32.0" />
                      </font>
                   </Label>
                </children>
@@ -140,7 +175,7 @@
                   <Image url="@resources/logo.png" />
                </image>
             </ImageView>
-            <Label layoutX="134.0" layoutY="20.0" prefHeight="37.0" prefWidth="168.0" text="Add Employee" textFill="WHITE">
+            <Label layoutX="134.0" layoutY="20.0" prefHeight="37.0" prefWidth="168.0" text="Add User" textFill="WHITE">
                <font>
                   <Font name="Andalus" size="23.0" />
                </font>
